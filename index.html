@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html>
+<head>
+
+<title>Aplic. Web de jQuery Mobile</title>
+<!---<meta name="viewport" content="width=device-width, initial-scale=1">---->
+<meta http-equiv="Content-type" content="text/html;charset=utf-8">
+	<meta name="viewport" id="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes;" />
+	<script type="text/javascript" charset="utf-8" src="jquery-1.10.2.js"></script>
+	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    <script type="text/javascript">
+             $(document).ready(function() {
+                $("#boton").click(function(event) {
+                    $("#capa").load('http://185.28.21.65/public_html/result.php');
+					$("#capa_fecha").load('http://185.28.21.65/public_html/proximo_evento.php');
+                });
+            });    
+        </script>
+       
+        
+        
+
+<link href="jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" href="theme.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+
+
+</head> 
+<body> 
+
+<div data-role="page" id="page" data-theme="a">
+	<div data-role="header" data-position="inline">
+		<h1>Página uno</h1>
+	</div>
+	<div data-role="content" data-theme="a">	
+		<ul data-role="listview">
+			<li><a href="#page2">Eventos</a></li>
+            <li><a href="#page3">Página tres</a></li>
+			<li><a href="#page4">Página cuatro</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer" data-theme="a">
+		<h4>Pie de página</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>Eventos</h1>
+	</div>
+	<div data-role="content" data-theme="a">	
+		Eventos proximos:
+        <div id="capa_fecha"></div>	
+        <div id="capa"></div>
+<input type="button" name="boton" value="Consultar eventos" id="boton" class="ui-btn">
+<li><a href="#page" class="ui-link">Regresar</a></p>
+		
+	</div>
+	<div data-role="footer">
+		<h4>Eventos Krisstal</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Página tres</h1>
+	</div>
+	<div data-role="content" data-theme="a">	
+		Contenido		
+	</div>
+	<div data-role="footer">
+		<h4>Pie de página</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4" data-theme="a">
+	<div data-role="header">
+		<h1>Página cuatro</h1>
+	</div>
+	<div data-role="content">	
+		Contenido		
+	</div>
+	<div data-role="footer">
+		<h4>Pie de página</h4>
+	</div>
+</div>
+
+</body>
+</html>
