@@ -20,22 +20,7 @@
         
         
         
-        <script type="text/javascript" charset="utf-8"> //esto es para realizar la notificacion
-	function onBodyLoad() {
-document.addEventListener("deviceready",onDeviceReady,false);
-}
-		function showAlert() {
-        navigator.notification.alert(
-            'El evento mas cercano es:',  // message
-            alertDismissed,         // callback 
-            'Esto es una prueba',            // title
-            'Cerrar'                  // buttonName
-        );
-    
-	}
-        function alertDismissed() {    
-		}
-    </script>
+        
         
         
         
@@ -73,8 +58,11 @@ document.addEventListener("deviceready",onDeviceReady,false);
 	</div>
 	<div data-role="content" data-theme="a">	
 		Eventos proximos:
+        	
+        
         <div id="capa_fecha"></div>	
-        <div id="capa"></div>
+        <input type="button" name="holi" value="holo" id="holi" class="ui-btn">
+<div id="capa"></div>
 <input type="button" name="boton" value="Consultar eventos" id="boton" class="ui-btn">
 <!--<li><a href="#page" class="ui-link">Regresar</a></p>-->
 		
