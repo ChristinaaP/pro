@@ -12,13 +12,21 @@
              $(document).ready(function() {
                 $("#boton").click(function(event) {
                     $("#capa").load('http://eventsirc.hol.es/result.php');
-					$("#capa_fecha").load('http://eventsirc.hol.es/proximo_evento.php');
                 });
             });    
         </script>
        
-        
-        
+    <script type="text/javascript">
+             $(document).ready(function() {
+                $("#boton2").click(function(event) {
+					$("#capa_fecha").load('http://eventsirc.hol.es/proximo_evento.php');
+                });
+            });  
+            function alerta(){
+            alert('hola,ndo');
+            }
+        </script>    
+    
 
         
         
@@ -58,7 +66,8 @@
         	
         
         <div id="capa_fecha"></div>	
-        <input type="button" name="holi" value="holo" id="boton" class="ui-btn">
+        <input type="button" name="holi" value="holo" id="boton2" class="ui-btn">
+        <input type="button" onClick="alerta()" class="ui-btn">
 <div id="capa"></div>
 <input type="button" name="boton" value="Consultar eventos" id="boton" class="ui-btn">
 <!--<li><a href="#page" class="ui-link">Regresar</a></p>-->
