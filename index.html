@@ -6,8 +6,16 @@
 <!---<meta name="viewport" content="width=device-width, initial-scale=1">---->
 <meta http-equiv="Content-type" content="text/html;charset=utf-8">
 	<meta name="viewport" id="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes;" />
-	<script type="text/javascript" charset="utf-8" src="jquery-1.10.2.js"></script>
-	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+ 
+   <link rel="stylesheet" href="jquery.mobile-1.3.1.css" />
+   <link rel="stylesheet" href="theme.css" />
+<link href="jquery.mobile.structure-1.3.2.css" rel="stylesheet" />
+
+<script src="jquery-1.9.1.js"></script>
+<script src="jquery.mobile-1.3.1.js"></script>
+<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    
+
     <script type="text/javascript">
              $(document).ready(function() {
                 $("#boton").click(function(event) {
@@ -16,26 +24,14 @@
             });    
         </script>
        
-    <script type="text/javascript">
-             $(document).ready(function() {
-                $("#boton2").click(function(event) {
-					$("#capa_fecha").load('http://eventsirc.hol.es/proximo_evento.php');
-                });
-            });  
-            function alerta(){
-            alert('hola,ndo');
-            }
-        </script>    
     
-
-        
-        
-
-<link href="jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
-		<link rel="stylesheet" href="theme.css" />
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css" />
-		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <script type="text/javascript">
+             $(document).ready(function() {              
+                    $("#capaalerta").load('http://eventsirc.hol.es/operacion.php');
+                });
+        </script>
+ 
+		
 
 
 </head> 
@@ -62,12 +58,10 @@
 		<h1>Eventos</h1>
 	</div>
 	<div data-role="content" data-theme="a">	
-		Eventos proximos:
-        	
-        
-        <div id="capa_fecha"></div>	
-        <input type="button" name="holi" value="holo" id="boton2" class="ui-btn">
-        <input type="button" onClick="alerta()" class="ui-btn">
+		Eventos proximos:<br>
+        	<div style="text-align: center">
+        <a href="#page4" style="margin-top: 15px;" data-role="button" data-rel="dialog" data-transition="fade" data-inline="true">Prox evento</a>
+       	    </div>
 <div id="capa"></div>
 <input type="button" name="boton" value="Consultar eventos" id="boton" class="ui-btn">
 <!--<li><a href="#page" class="ui-link">Regresar</a></p>-->
@@ -90,16 +84,21 @@
 	</div>
 </div>
 
-<div data-role="page" id="page4" data-theme="a">
-	<div data-role="header">
-		<h1>Página cuatro</h1>
-	</div>
-	<div data-role="content">	
-		Contenido		
-	</div>
-	<div data-role="footer">
-		<h4>Pie de página</h4>
-	</div>
+<div data-role="page" id="page4" data-theme="e">
+
+	<div data-role="header" data-theme="e">
+			<h1>asdasd</h1>
+		</div><!-- /header -->
+
+		<div data-role="content" data-theme="e">
+            <center>
+                <p>TU PROXIMO ASI ES ASI:</p>
+                <div id="capaalerta"></div>
+
+                <a href="index.html" data-role="button" data-theme="e" data-rel="back">Regresar</a>
+                </center>
+            </div>
+
 </div>
 
 </body>
