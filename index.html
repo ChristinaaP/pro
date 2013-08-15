@@ -30,7 +30,11 @@
                     $("#capaalerta").load('http://eventsirc.hol.es/operacion.php');
                 });
         </script>
- 
+ <style>
+ #holi{
+	 height:50%;
+ }
+ </style>
 		
 
 
@@ -39,36 +43,48 @@
 
 <div data-role="page" id="page" data-theme="a">
 	<div data-role="header" data-position="inline">
-		<h1>Bienvenido!</h1>
+		<h5>¡Bienvenido!</h5>
         
 	</div>
-     <p>Para ver los proximos eventos a realizar presione el botón "Eventos"</p>
+    <br>
+   
+     <p>Gracias por hacer uso de la aplicación de administrador de Eventos Krisstal, donde podras visualizar los eventos pendientes. Para comenzar porfavor presione el botón "Eventos".</p>
+      <br>
+   
 	<div data-role="content" data-theme="a">	
-		<ul data-role="listview">
+		<ul data-role="listview" data-role="button">
 			<li><a href="#page2">Eventos</a></li>
            
 		</ul>		
 	</div>
-	<div data-role="footer" data-theme="a">
+	<div data-role="footer" data-theme="a" class="ui-footer ui-footer-fixed text-center">
 		<h4>Eventos Krisstal</h4>
 	</div>
+    
+    
 </div>
 
 <div data-role="page" id="page2" data-theme="a">
-	<div data-role="header">
+	<div data-role="header" data-position="inline">
 		<h1>Eventos</h1>
 	</div>
 	<div data-role="content" data-theme="a">	
 		EVENTOS PROXIMOS:<br>
+        <p>El botón "Proximo evento" te recordara cuál es el evento mas proximo a llevar a cabo.</p>
         	<div style="text-align: center">
+            
         <a href="#page4" style="margin-top: 15px;" data-role="button" data-rel="dialog" data-transition="fade" data-inline="true">Proximo evento</a>
        	    </div>
+            
+            <p>El botón "Consulta todos" te muestra todos los eventos guardados en la Base de Datos de Eventos Krisstal.</p>
+            <br>
 <div id="capa"></div>
 <input type="button" name="boton" value="Consultar todos" id="boton" class="ui-btn">
 <!--<li><a href="#page" class="ui-link">Regresar</a></p>-->
 		
 	</div>
-	<div data-role="footer">
+	<div data-role="footer" data-theme="a" class="ui-footer ui-footer-fixed text-center">
+    
 		<h4>Eventos Krisstal</h4>
 	</div>
 </div>
@@ -93,10 +109,13 @@
 
 		<div data-role="content" data-theme="c">
             <center>
+           <div id="holi">
+           
+           </div>
                 <p>EL EVENTO MAS PROXIMO ES:</p>
                 <div id="capaalerta"></div>
 
-                <a href="index.html" data-role="button" data-theme="c" data-rel="back">Regresar</a>
+                <a href="index.html" data-role="button" data-theme="c" data-rel="back">Cerrar</a>
                 </center>
             </div>
 
